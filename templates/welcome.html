@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | BreachBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="welcome-body">
+
+    <nav class="welcome-nav">
+        <h2>🛡️ BreachBuddy</h2>
+        <span>Privacy First. Security Always.</span>
+    </nav>
+
+    <main class="welcome-container">
+
+        <div class="welcome-icon">🛡️</div>
+
+        <p class="welcome-tag">YOUR DIGITAL SAFETY COMPANION</p>
+
+        <h1>
+            Welcome to <span>BreachBuddy</span>
+        </h1>
+
+        <h2>Understand Data Breaches. Protect Your Privacy.</h2>
+
+        <p class="welcome-description">
+            Data breach notifications can be confusing.
+            BreachBuddy helps you understand security notices
+            in simple language, identify potentially exposed
+            information, and discover the steps you can take
+            to protect your personal data.
+        </p>
+
+        <a href="{{ url_for('analyzer') }}" class="get-started-btn">
+            Get Started →
+        </a>
+
+        <div class="welcome-features">
+            <div>
+                <span>📄</span>
+                <h3>Easy Analysis</h3>
+                <p>Understand complex notifications.</p>
+            </div>
+
+            <div>
+                <span>🔍</span>
+                <h3>Risk Awareness</h3>
+                <p>Identify potentially exposed data.</p>
+            </div>
+
+            <div>
+                <span>🔒</span>
+                <h3>Privacy Focused</h3>
+                <p>Process notices without database storage.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="welcome-footer">
+        © 2026 BreachBuddy | Protect Your Data. Protect Your Privacy.
+    </footer>
+
+</body>
+</html>

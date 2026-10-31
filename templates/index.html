@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreachBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <h1>🛡️ BreachBuddy</h1>
+        <p>Your Privacy-Preserving Breach Notification Assistant</p>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h2>Understand Your Data Breach Notice</h2>
+            <p>
+                Paste or upload your breach notification to understand
+                what happened, identify potentially exposed information,
+                and discover the steps you can take to protect your data.
+            </p>
+        </section>
+
+        <section class="analyzer-card">
+
+            <label for="notice">Breach Notification</label>
+
+            <textarea
+                id="notice"
+                placeholder="Paste your breach notification here..."
+            ></textarea>
+
+            <div class="upload-section">
+                <div class="upload-icon">📄</div>
+
+                <h3>Upload Your Notification</h3>
+
+                <p>Choose a PDF or TXT file from your device</p>
+
+                <label for="noticeFile" class="upload-btn">
+                    Choose File
+                </label>
+
+                <input
+                    type="file"
+                    id="noticeFile"
+                    accept=".pdf,.txt"
+                    hidden
+                >
+
+                <p id="fileName" class="file-name">
+                    No file selected
+                </p>
+
+                <small>Supported formats: PDF, TXT</small>
+            </div>
+
+            <button id="analyzeBtn" class="analyze-btn">
+                🔍 Analyze Notification
+            </button>
+
+            <section id="result" class="result-section"></section>
+
+        </section>
+
+        <section class="privacy-note">
+            🔒 <strong>Your Privacy Matters</strong>
+            <p>
+                Your notification is processed in memory.
+                This demo does not save it to a database.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 BreachBuddy | Protect Your Data. Protect Your Privacy.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
